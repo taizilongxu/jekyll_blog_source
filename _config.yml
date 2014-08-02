@@ -1,0 +1,20 @@
+# Site settings
+title: Limbo's Blog
+email: 468137306@qq.com
+description: "Python,HTML,CSS,Machine Leaning"
+baseurl: ""
+url: "http://taizilongxu.github.io"
+
+# Build settings
+permalink: date
+
+highlighter: pygments
+markdown: redcarpet
+redcarpet:
+  extensions: [fenced_code_blocks,no_intra_emphasis,strikethrough,no_intra_emphasis,autolink,tables]
+
+#duoshuo
+  comments :
+    provider : duoshuo
+    duoshuo : 
+      short_name : taizilongxu

@@ -1,0 +1,13 @@
+---
+layout: category
+title: Archive
+permalink: /archive/
+---
+    {% for post in site.posts %}
+
+      <li>
+        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }} </a>
+       <span class="category-date">{{ post.date | date: "%B %e, %Y" }}</span>
+      </li>
+
+    {% endfor %}
