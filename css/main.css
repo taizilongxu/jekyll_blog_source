@@ -40,7 +40,6 @@ a:visited { color: #205caa; }
 /* Site header */
 
 .site-header {
-  border-top: 5px solid #333;
   border-bottom: 1px solid #e8e8e8;
   min-height: 56px;
   background-color: white;
@@ -205,7 +204,11 @@ a:visited { color: #205caa; }
 /* Post styles */
 /* ----------------------------------------------------------*/
 
-.post { width:880px; margin:auto;margin-left:  }
+.post {
+  width:800px;
+  margin:auto;
+  padding-bottom: 20px;
+  }
 
 .post-header {
   margin: 10px 0 30px;
@@ -449,6 +452,7 @@ text-align: -webkit-match-parent;
   line-height: 1.4;
   font-size: 20px;
   font-weight: 400;
+  padding-right: 80px;
 }
 
 .category .title a{
