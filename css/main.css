@@ -85,6 +85,10 @@ a:visited { color: #205caa; }
 .site-footer {
   border-top: 1px solid #e8e8e8;
   padding-top:30px;
+  position: relative;
+	margin-top: -50px; /* footeré«åº¦çè´å¼ */
+	height: 50px;
+	clear:both;
 }
 
 .footer-heading {
@@ -146,8 +150,10 @@ a:visited { color: #205caa; }
   padding-top: 35px;
   background-color: #fff;
   padding-bottom: 0px;
+  height: auto;
+  min-height: 100%;
 }
-.page-content .wrap{padding-bottom: 15px;}
+.page-content .wrap{padding-bottom: 50px;}
 
 
 /* Home styles */
@@ -550,6 +556,7 @@ img {
   padding-left:41px;
   padding-top:25px;
   padding-bottom:35px;
+  margin-bottom: 25px;
   }
 ul{border:0; margin:0; padding:0;margin:0 auto;}
 
