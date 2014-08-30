@@ -16,5 +16,8 @@ redcarpet:
 #duoshuo
   comments :
     provider : duoshuo
-    duoshuo : 
+    duoshuo :
       short_name : taizilongxu
+
+#分页
+paginate: 15
