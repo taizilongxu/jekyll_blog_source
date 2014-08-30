@@ -49,6 +49,8 @@ sudo apt-get install tmux
 sudo apt-get install guake
 sudo apt-get install git
 sudo apt-get install tig
+sudo apt-get install ipython
+sudo apt-get install autojump
 ```
 
 python的[pip](https://bootstrap.pypa.io/get-pip.py)
