@@ -137,14 +137,12 @@ a:visited { color: #205caa; }
   display: inline-block;
   width: 40px;
   height: 40px;
-  position: relative;
-  top: 12px;
 }
 
 .github {
   position: absolute;
-  transition: transform 2s ease-out;
-  top:22px;
+  transition: transform 0.5s ease-out;
+  top:33px;
 }
 
 .github:hover{
