@@ -123,6 +123,13 @@ a:visited { color: #205caa; }
   padding-left: 80px;
 }
 
+.footer-col-2{
+  float:right;
+  margin-top:24px;
+  padding-right:50px;
+  font-weight:bold;
+}
+
 
 .site-footer ul { list-style: none; }
 
