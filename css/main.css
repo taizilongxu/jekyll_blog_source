@@ -325,7 +325,7 @@ text-align: -webkit-match-parent;
   border-top-right-radius:5px;
   border-bottom-right-radius:5px;
   padding:10px 15px;
-  overflow:overlay;
+  overflow:auto;
 }
 .post pre code {
   background-color:transparent !important
