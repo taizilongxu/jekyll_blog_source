@@ -126,7 +126,7 @@ a:visited { color: #205caa; }
 .footer-col-2{
   float:right;
   margin-top:24px;
-  padding-right:50px;
+  padding-right:20px;
   font-weight:bold;
 }
 
@@ -378,29 +378,15 @@ text-align: -webkit-match-parent;
 /* media queries */
 /* ----------------------------------------------------------*/
 
-@media screen and (max-width: 750px) {
-  .footer-col-1 {
-    width: 25%;
-    width: -webkit-calc(50% - 10px);
-    width: -moz-calc(50% - 10px);
-    width: -o-calc(50% - 10px);
-    width: calc(50% - 10px);
-    margin-right: 0;
-  }
-
-  .site-footer .column.footer-col-2 {
-    width: auto;
-    float: none;
-    clear: both;
-  }
-
-}
 
 @media screen and (max-width: 830px) {
 
   .wrap {
     padding: 0;
   }
+  .post {
+    width:auto;
+}
   .home {
     padding:0;
   }
@@ -444,9 +430,12 @@ text-align: -webkit-match-parent;
     margin: 0;
   }
 
-
-
-  .post-header h1 { font-size: 36px; }
+  .post-header h1 {
+    font-size: 36px;
+  }
+  .post-header {
+    text-align:center;
+}
   .post-content h2 { font-size: 28px; }
   .post-content h3 { font-size: 22px; }
   .post-content h4 { font-size: 18px; }
