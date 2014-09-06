@@ -51,6 +51,10 @@ sudo apt-get install git
 sudo apt-get install tig
 sudo apt-get install ipython
 sudo apt-get install autojump
+------------
+September 6 2014 10:22 AM 更新
+sudo apt-get install htop #比top好用太多
+------------
 ```
 
 python的[pip](https://bootstrap.pypa.io/get-pip.py)
