@@ -235,6 +235,7 @@ a:visited { color: #205caa; }
   letter-spacing: -1.75px;
   line-height: 1;
   font-weight: bold;
+  color: #333;
 }
 
 .post-header .meta {
@@ -245,7 +246,7 @@ a:visited { color: #205caa; }
 
 .post-header .meta .pre{
   font-weight: bold;
-  color: #000000;
+  color: #333;
 }
 
 .post-content {
@@ -254,7 +255,11 @@ a:visited { color: #205caa; }
   margin: 0 0 60px;
 }
 
-.post-content > * { margin: 20px 0; }
+.post-content > * {
+  margin: 20px 0;
+  font-size: 1em;
+  line-height: 1.5;
+  }
 
 /*GFM */
 /* ----------------------------------------------------------*/
