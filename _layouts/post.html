@@ -6,7 +6,7 @@ layout: default
   <header class="post-header">
     <h1>{{ page.title }}</h1>
     <p class="meta">⌚ {{ page.date | date: "%Y-%m-%d" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}
-    {% if page.category %}<span class="pre">categories:</span>{{ page.category }} {% endif %}{% if page.tags %}<span class="pre">tags:</span>{{ page.tags }} {% endif %}
+    &nbsp&nbsp&nbsp✉{% if page.category %} {{ page.category }} {% endif %}&nbsp&nbsp&nbsp#{% for tag in page.tags %} {{ tag }} {% endfor %}
     </p>
 
   </header>
