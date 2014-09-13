@@ -2,11 +2,12 @@
 title: Hackerxu's Blog
 email: 468137306@qq.com
 description: "Python,HTML,CSS,Machine Leaning"
+permalink: /:year/:month/:day/:title.html
 baseurl: ""
 url: "http://hackerxu.com"
 
 # Build settings
-permalink: date
+# permalink: date
 
 highlighter: pygments
 markdown: redcarpet
@@ -18,6 +19,3 @@ redcarpet:
     provider : duoshuo
     duoshuo :
       short_name : taizilongxu
-
-#分页
-paginate: 30
