@@ -747,3 +747,74 @@ content: "\f02c";
 .category li.listing-seperator{
   padding-bottom: 0px;
 }
+
+
+
+
+#content {
+  text-align: center;
+}
+
+#code {
+	float: left;
+	color: #4D4D4C;
+	font-family: "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", "sans-serif";
+	font-size: 14px;
+	font-weight:bold;
+  padding-left: 120px;
+  padding-bottom: 30px;
+  line-height: 1.3;
+}
+
+#code .number{
+	color: #ae81ff;
+}
+
+#code .u{
+	color: red;
+}
+
+#code .string{
+	color: #ED9C28;
+}
+#code .value{
+	color: #080;
+}
+
+#code .keyword{
+	color: #F92672;
+	font-weight:bold;
+}
+
+#code .placeholder{
+	margin-left:30px;
+}
+
+#code .space{
+	margin-left:7px;
+}
+
+#code .comments{
+	color: #8E908C;
+	font-weight: normal;
+}
+
+#copyright{
+	margin-top: 10px;
+	text-align: center;
+	width:100%;
+	color:#666;
+}
+
+#errorMsg{
+	width: 100%;
+	text-align: center;
+	font-size: 24px;
+	position: absolute;
+	top: 100px;
+	left:0px;
+}
+
+#copyright a{
+	color:#666;
+}
