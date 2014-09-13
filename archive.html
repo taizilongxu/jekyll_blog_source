@@ -3,9 +3,16 @@ layout: category
 title: Archive
 permalink: /archive/
 ---
-    {% for post in site.posts %}
-      <li>
-        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }} </a>
-       <span class="category-date">{{ post.date | date: "%Y-%m-%d" }}</span>
-      </li>
-    {% endfor %}
+<ul class="posts">
+{% for post in site.posts %}
+  {% capture m %}{{post.date | date:"%m"}}{% endcapture %}
+  {% if month != m %}
+    {% assign month = m %}
+    <li class="listing-seperator">{{ post.date | date:"%Y-%m" }}</li>
+  {% endif %}
+  <li class="listing-item">
+    <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+    <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+  </li>
+{% endfor %}
+</ul>

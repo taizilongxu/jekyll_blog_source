@@ -2,18 +2,17 @@
 layout: default
 ---
 <div class="home">
-  <ul class="posts">
-    {% for post in paginator.posts %}
-      <li>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}
-       <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
-       </a>
-      </li>
-    {% endfor %}
-  </ul>
-</div>
+  {% for page in site.categories.life limit: 1 %}
+  <header class="post-header">
+    <h1><a href="{{ page.url }}">{{ page.title }}</a></h1>
+    <p class="meta"><i class="fa fa-calendar"></i> {{ page.date | date: "%Y-%m-%d" }}&nbsp&nbsp&nbsp<i class="fa fa-folder-open"></i>{% if page.category %} <a href="/categories/#{{page.category}}">{{ page.category }}</a> {% endif %}&nbsp&nbsp&nbsp<i class="fa fa-tags"></i>&nbsp{% for tag in page.tags %}&nbsp<a href="/tags/#{{ tag }}">{{ tag }}</a>{% endfor %}</p>
+  </header>
+  <article class="post-content">
+  {{ page.content }}
+  </article>
+  {% endfor %}
 <!-- 分页 -->
-<div class="pagination">
+<!-- <div class="pagination">
 <ul id="pagination-flickr">
   {% if paginator.previous_page %}
     {% if paginator.previous_page == 1 %}
@@ -42,4 +41,20 @@ layout: default
     <li class="next-off"><i class="fa fa-arrow-right"></i></li>
   {% endif %}
 </ul>
+</div> -->
+  <ul class="posts">
+    <li class="listing-seperator">I have no time to waste</li>
+  {% capture month %}{{ site.time | date:"%m"}}{% endcapture %}
+  {% for post in site.posts %}
+    {% capture m %}{{ post.date | date:"%m"}}{% endcapture %}
+    {% if month != m %}
+    {% break %}
+    {% endif %}
+    <li class="listing-item">
+      <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+      <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+    <li class="listing-seperator"><a href="/archive/">Long long ago</a></li>
+  </ul>
 </div>
