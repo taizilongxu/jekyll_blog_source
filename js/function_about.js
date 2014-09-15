@@ -1,3 +1,4 @@
+// 打印效果
 (function($) {
 	$.fn.typewriter = function() {
 		this.each(function() {

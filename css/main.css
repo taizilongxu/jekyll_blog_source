@@ -325,11 +325,10 @@ font-weight: bold;
 .post-content li {
 display: list-item;
 text-align: -webkit-match-parent;
-list-style-type: none;
 }
 
-.post .post-content li{
-  list-style-type: disc;
+.listing li{
+  list-style-type: none;
 }
 
 .post pre,
@@ -817,4 +816,38 @@ content: "\f02c";
 
 #copyright a{
 	color:#666;
+}
+
+/*movies*/
+
+.grid-view {
+  font-size: 12px;
+  line-height: 1.62;
+}
+
+.grid-view .item {
+overflow: auto;
+display: table;
+zoom: 1;
+margin: 0 0 20px;
+padding: 0 0 5px;
+border-bottom: 1px dashed #ddd;
+}
+
+.grid-view .item .info {
+width: 510px;
+}
+
+.item .info {
+float: right;
+width: 520px;
+text-align: left;
+}
+
+.item .info ul {
+margin-left: 1em;
+list-style-type: none;
+margin: 0;
+padding: 0;
+list-style: none;
 }
