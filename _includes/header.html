@@ -1,7 +1,5 @@
 <header class="site-header">
-
   <div class="wrap">
-
     <a class="site-title" href="{{ site.baseurl }}/"><h1><strong> <font style="color:#39B3D7" >L</font><font style="color:#ED9C28">i</font><font style="color:#47A447">m</font><font style="color:#D9534F">b</font><font style="color:#3276B1">o</font>
     </strong>
     </h1></a>
@@ -18,9 +16,9 @@
         </svg>
       </a>
       <div class="trigger">
-        {% for page in site.pages %}
-        {% if page.title %}
-          <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+        {% for nav in site.navigations %}
+        {% if nav.title %}
+          <a class="page-link" href="{{ nav.href }}">{{ nav.title }}</a>
         {% endif %}
         {% endfor %}
       </div>

@@ -5,6 +5,7 @@ description: "Python,HTML,CSS,Machine Leaning"
 permalink: /:year/:month/:day/:title.html
 baseurl: ""
 url: "http://hackerxu.com"
+atom-baseurl: ""
 
 # Build settings
 # permalink: date
@@ -19,3 +20,20 @@ redcarpet:
     provider : duoshuo
     duoshuo :
       short_name : taizilongxu
+
+navigations:
+  - title: About
+    class: fa fa-list-ul
+    href: /about/
+  - title: Archive
+    class: fa fa-tags
+    href: /archive/
+  - title: Categories
+    class: fa fa-user
+    href: /categories/
+  - title: Tags
+    class: fa fa-film
+    href: /tags/
+  - title: Rss
+    class: fa fa-rss
+    href: /atom.xml

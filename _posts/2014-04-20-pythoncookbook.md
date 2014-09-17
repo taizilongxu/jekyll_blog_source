@@ -14,7 +14,7 @@ tags: [python,python-cookbook]
 1. thelist = list(thestring)
      for c in tehstring:
         do_something_with(c)
-2. results = [do_something_with(c) for c in thestring] 
+2. results = [do_something_with(c) for c in thestring]
 3. results = map(do_something,thestring)
 ```
 
@@ -27,7 +27,7 @@ tags: [python,python-cookbook]
 a
 
 >>>print ord(u'\u2020')
-8224 
+8224
 >>>print repr(unichr(8224))
 u'\u2020'
 
@@ -68,7 +68,7 @@ largeString = ''.join(pieces)
 2.少量字符优先
 
 ```python
-largeString = '%s%s something %s yet more' % (small1,small2,small3) 
+largeString = '%s%s something %s yet more' % (small1,small2,small3)
 ```
 
 3.效率低下，会产生许多字符串的中间结果
@@ -82,7 +82,7 @@ largeString = reduce(operator.add,pieces,'')
 
 1.字符，切片方法
 
-    revchars = astring[::-1] 
+    revchars = astring[::-1]
 2.单词
 
 ```python
@@ -92,15 +92,15 @@ revwords = ' '.join(revwords)
 revwords = ' '.join(astring.split()[::-1])
 ```
 
-reversed返回一个迭代器 
+reversed返回一个迭代器
 
 ##1.8检查字符中是否包含某字符集合中的字符
 
 ```python
 def containsAny(seq,aset):
-    for c in aset: 
-    	if c inaset: 
-        	return True 
+    for c in aset:
+    	if c inaset:
+        	return True
     return False
 ```
 
@@ -171,7 +171,7 @@ defa reindent(s,numSpace):
     lines = [leading_space + line.strio() for line in s.splitlines()]
     return '\n'.join(lines)
 ```
- 
+
 2.相对缩进
 
 ```python
@@ -224,7 +224,7 @@ line = line.rstrip(‘\n')
 也可以用一个for循环
 
 ```python
-for line in file_object: 
+for line in file_object:
 	process line
 ```
 
@@ -255,17 +255,17 @@ output_file.write(input_file.read().replace(stext,rtext))
 如果文件不大的话：
 
 ```python
-import linecache 
+import linecache
 theline = linecache.getline(thefilepath,desired_line_number)
 ```
 
 如果文件太大则：
 
 ```python
-def getline(thefilepath,desired_line_number): 
-	if desired_line_number < 1: 
-    	return ‘ ‘ 
-    for current_line_number,line in enumerate(open(thefilepath,'rU')): 
+def getline(thefilepath,desired_line_number):
+	if desired_line_number < 1:
+    	return ‘ ‘
+    for current_line_number,line in enumerate(open(thefilepath,'rU')):
     	if current_line_number == desired_line_number - 1:
     		return line return ‘ ‘
 ```
@@ -281,21 +281,21 @@ count = len(open(thefilepath,'rU').readlines())
 对于大文件：
 
 ```python
-count = -1 
-for count,line in enumerate(open(thefilepath,'rU')): 
+count = -1
+for count,line in enumerate(open(thefilepath,'rU')):
 	pass count += 1
 ```
 
 还有一种更巧妙的方法，寻找\n结尾的次数:
 
 ```python
-count = 0 
-thefile = open(thefilepath,'rb') 
-while True: 
-	buffer = thefile.read(8192*1024) 
-    if not buffer: 
-    	break 
-    count + = buffer.count(‘\n') 
+count = 0
+thefile = open(thefilepath,'rb')
+while True:
+	buffer = thefile.read(8192*1024)
+    if not buffer:
+    	break
+    count + = buffer.count(‘\n')
 thefile.close()
 ```
 
@@ -304,18 +304,18 @@ thefile.close()
 使用两重循环
 
 ```python
-for line in open(thefilepath): 
-	for word in line.split(): 
+for line in open(thefilepath):
+	for word in line.split():
     	dosomethingwith(word)
 ```
 
 使用正则表达式(词被定义为数字字母，连字符或单引号构成的序列)：
 
 ```python
-import re 
-re_word = re.compile(r”[\w'-]+”) 
-for line in open(thefilepath): 
-	for word in re_word.finditer(line): 
+import re
+re_word = re.compile(r”[\w'-]+”)
+for line in open(thefilepath):
+	for word in re_word.finditer(line):
     	dosomethingwith(word.group(0))
 ```
 
@@ -329,26 +329,26 @@ thefile.seek(offset) buffer = (thefile.read(size))
 
 ##2.16遍历目录树
 
-glob.glob 
-当前目录下的所有文件！！！ 
-os.walk 
+glob.glob
+当前目录下的所有文件！！！
+os.walk
 返回一个三元组：
 
-* dirpath是以string字符串形式返回该目录下所有的绝对路径； 
-* dirnames是以列表list形式返回每一个绝对路径下的文件夹名字； 
+* dirpath是以string字符串形式返回该目录下所有的绝对路径；
+* dirnames是以列表list形式返回每一个绝对路径下的文件夹名字；
 * filesnames是以列表list形式返回该路径下所有文件名字。
 
 ```python
-for i in os.walk(‘/home/limbo/code/python'): 
-	for name in i[2]: 
+for i in os.walk(‘/home/limbo/code/python'):
+	for name in i[2]:
     	print i[0] + ‘/‘ + name
 ```
 
 ##2.17在目录树中改变文件扩展名
 
 ```python
-import os 
-def sqapextensions(dir,before,after): 
+import os
+def sqapextensions(dir,before,after):
     if before[:1]  != '.':
 
         before = '.' + before #如果没有'.'加
@@ -371,7 +371,7 @@ def sqapextensions(dir,before,after):
 
                 os.rename(oldfile,newfile) #重命名
 
-if __name__ == '__main__' 
+if __name__ == '__main__'
     import sys
 
     if len(sys.argv) == 4
@@ -386,7 +386,7 @@ if __name__ == '__main__'
 ##2.18从指定搜索路径搜索文件
 
 ```python
-import os 
+import os
 def search_file(filename,search_path,pathsep = os.sep):
     for path in search_path.split(pathsep):
         candiate = os.path.join(path,filename)
@@ -394,26 +394,26 @@ def search_file(filename,search_path,pathsep = os.sep):
             return os.path.abspath(candidate)
     return None
 
-if __name__ == '__main__' 
-    search_path = 
+if __name__ == '__main__'
+    search_path =
     find_file = search_file('ls',search_path)
     if find_file:
         print "File 'ls' found at %s" % find_file
-    else: 
+    else:
         print "File 'ls' not found"
 ```
 
 ##2.19根据指定的搜索路径和模式寻找文件
 
 ```python
-import glob,os 
+import glob,os
 
-def all_file(pattern,search_path,pathsep = os.sep): 
+def all_file(pattern,search_path,pathsep = os.sep):
 
     for path in search_path.split(pathsep):
-  
+
         for match in glob.glob(os.path.join(path,pattern)):
-      
-            yield match #生成迭代器 
+
+            yield match #生成迭代器
 ```
 

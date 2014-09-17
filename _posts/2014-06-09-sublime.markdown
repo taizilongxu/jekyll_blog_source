@@ -1,18 +1,45 @@
 ---
 layout: post
-title:  "Set Sublime 2/3"
+title:  "Set Sublime 3"
 category: sublime
 tags: sublime
 ---
 
+####首先安装Package control
+
+``` ctrl+` ```打开控制台,然后输入
+
+```python
+import  urllib.request,os;pf='Package Control.sublime-package';ipp=sublime.installed_packages_path();urllib.request.install_opener(urllib.request.build_opener(urllib.request.ProxyHandler()));open(os.path.join(ipp,pf),'wb').write(urllib.request.urlopen('http://sublime.wbond.net/'+pf.replace(' ','%20')).read())
+```
+
+回车,然后按``` Ctrl + Shift + p ```搜索package,然后就可以安装插件了
+
+####空格等字符宽度问题
+
+[stackoverflow](http://stackoverflow.com/questions/18171536/the-size-of-the-space-and-the-char-on-the-sublime-text),这里有,更改一下font_face搞定
+
+```
+	"font_face": "Courier New",
+	"font_size": 10
+```
+
 ####插件安装:
+
+* sidebar enhancement:侧边栏增强,加入几个选项,挺方便的
 * ConvertToUTF8 ST2只支持utf8编码，该插件可以显示与编辑 GBK, BIG5, EUC-KR, EUC-JP, Shift_JIS 等编码的文件
-* Bracket Highlighter 括号增强
-* SublimeLinter 
+* Bracket Highlighter 括号匹配高亮
+* SublimeLinter:这个吗~~代码校验,找出错误
 * function name display
+* [TrailingSpacer](https://github.com/SublimeText/TrailingSpaces):显示行尾部多余空格,可以快捷键删除
+* CSScomb:CSS属性排序,方便查看和修改
+* Monokai Extended:monokai色彩增强
+* Gitgutter:这个非常重要了,git的一切状态尽在掌握中
+* Sublime Code Intel:代码补全 
+
 
 ####配置：
-* 光标外形:default-setting:caret_style:phase（像在呼吸）
+* 光标外形:"caret_style":"phase"（像在呼吸）
 * 关闭括号的自动完成:"auto_match_enabled": false
 
 
