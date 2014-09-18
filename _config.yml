@@ -5,7 +5,8 @@ description: "Python,HTML,CSS,Machine Leaning"
 permalink: /:year/:month/:day/:title.html
 baseurl: ""
 url: "http://hackerxu.com"
-atom-baseurl: ""
+atom-baseurl: "http://hackerxu.com"
+author: "xuxiao"
 
 # Build settings
 # permalink: date
