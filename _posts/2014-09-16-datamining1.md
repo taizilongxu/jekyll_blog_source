@@ -5,9 +5,9 @@ category: datamining
 tags: datamining 
 ---
 
-##Data Preprocessing(数据预处理)
+##Chanpter 2 Data Preprocessing(数据预处理)
 
-定期更新中~
+定期更新中~October 11 2014 10:36 AM
 
 ###1 Why preprocess the data?(数据预处理的必要性）
 
@@ -130,15 +130,26 @@ Loess (local regression) curve(回归曲线?): add a smooth curve to a scatter p
 4. **Normalization(规范化)**: 将属性数据按比例缩放，使之落入一个小的特定区间，如-1．0到1．0或0.0到1.0。规格化的目的是将一个属性取值范围影射到一个特定范围之内，以消除数值性属性因大小不一而造成挖掘结果的偏差.
 5. **Attribute construction属性构造或特征构造**: 可以利用已知的属性构造新的属性并添加到属性集中，以帮助挖掘过程。(由长，宽求面积)
 
-###7 Data Reduction(数据规约)
+###7 Data Reduction(数据归约)
 
-主要以下步骤:
+主要以下方法:
 
-1. 数据立方合计
-2. 维数削减
-3. 数据压缩
-4. 数据块消减
-5. 离散化与概念层次生成
+1. Data cube aggregation(数据方聚集):聚集操作用于数据方中的数据。主要用来构建数据立方.
+![](https://raw.githubusercontent.com/taizilongxu/taizilongxu.github.io/master/img/2014-10-11 10:28:48 的屏幕截图.png)
+2. Atrribute subset selection(维归约):可以检测并删除不相关、弱相关或冗余的属性或维。(去除多余的属性值)
+3. Dimensionality reduction(数据压缩):使用编码机制压缩数据集。
+	* discrete wavelet transform小波变换DWT
+    * principal components analysis 主要成分分析
+4. Numerosity reduction(数值压缩):用替代的、较小的数据表示替换或估计数据,如参数模型(只需要存放模型参数,而不是实际数据)或非参数方法,如**聚类**、**选样**和使用**直方图**。
+5. Discretization and concept hierarchy generation(离散化和概念分层产生):属性的原始值用区间值或较高层的概念替换。概念分层允许挖掘多个抽象层上的数据,是数据挖掘的一种强有力的工具。
+五种数值概念分层产生方法:
+	* 分箱
+    * 直方图分析
+    * 聚类分析
+    * 基于熵的离散化
+    * 通过“自然划分”的数据分段 :  **3-4-5 规则**
+
+##Chapter 3 Data warehouse and OLAP technology:an overview(数据仓库和数据挖掘的 OLAP 技术)
 
 
 
