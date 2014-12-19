@@ -723,7 +723,6 @@ li.listing-seperator {
 }
 
 li.listing-seperator:before {
-    content: "⭠  ";
     color: #ccc;
 }
 

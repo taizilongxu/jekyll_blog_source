@@ -12,7 +12,7 @@ layout: default
   </article>
   {% endfor %}
   <ul class="posts">
-    <li class="listing-seperator">Yesterday you said tomorrow</li>
+    <li class="listing-seperator"><i class="fa fa-arrow-down"></i></i>Yesterday you said tomorrow</li>
   {% capture month %}{{ site.time | date:"%m"}}{% endcapture %}
   {% for post in site.posts %}
     {% capture m %}{{ post.date | date:"%m"}}{% endcapture %}
@@ -24,6 +24,6 @@ layout: default
       <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
     </li>
   {% endfor %}
-    <li class="listing-seperator"><a href="/archive/">Long ago</a></li>
+    <li class="listing-seperator"><i class="fa fa-quote-right"></i><a href="/archive/">Long ago</a></li>
   </ul>
 </div>
