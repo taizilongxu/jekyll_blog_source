@@ -5,14 +5,14 @@ layout: default
   {% for page in site.categories.life limit: 1 %}
   <header class="post-header">
     <h1><a href="{{ page.url }}">{{ page.title }}</a></h1>
-    <p class="meta"><i class="fa fa-calendar"></i> {{ page.date | date: "%Y-%m-%d" }}&nbsp&nbsp&nbsp<i class="fa fa-folder-open"></i>{% if page.category %} <a href="/categories/#{{page.category}}">{{ page.category }}</a> {% endif %}&nbsp&nbsp&nbsp<i class="fa fa-tags"></i>&nbsp{% for tag in page.tags %}&nbsp<a href="/tags/#{{ tag }}">{{ tag }}</a>{% endfor %}</p>
+    <p class="meta"><i class="fa fa-calendar"></i>{{ page.date | date: "%Y-%m-%d" }}&nbsp&nbsp&nbsp<i class="fa fa-folder-open"></i>{% if page.category %} <a href="/categories/#{{page.category}}">{{ page.category }}</a> {% endif %}&nbsp&nbsp&nbsp<i class="fa fa-tags"></i>&nbsp{% for tag in page.tags %}&nbsp<a href="/tags/#{{ tag }}">{{ tag }}</a>{% endfor %}</p>
   </header>
   <article class="post-content">
   {{ page.content }}
   </article>
   {% endfor %}
   <ul class="posts">
-    <li class="listing-seperator"><i class="fa fa-arrow-down"></i></i>Yesterday you said tomorrow</li>
+    <!-- <li class="listing-seperator">Yesterday you said tomorrow</li> -->
   {% capture month %}{{ site.time | date:"%m"}}{% endcapture %}
   {% for post in site.posts %}
     {% capture m %}{{ post.date | date:"%m"}}{% endcapture %}
@@ -24,6 +24,6 @@ layout: default
       <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
     </li>
   {% endfor %}
-    <li class="listing-seperator"><i class="fa fa-quote-right"></i><a href="/archive/">Long ago</a></li>
+    <li class="listing-seperator"><a href="/archive/">Long ago</a></li>
   </ul>
 </div>
