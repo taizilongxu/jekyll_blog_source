@@ -6,7 +6,7 @@ permalink: /:year/:month/:day/:title.html
 baseurl: ""
 url: "http://hackerxu.com"
 atom-baseurl: "http://hackerxu.com"
-author: "xuxiao"
+author: "hackerxu"
 
 # Build settings
 # permalink: date
