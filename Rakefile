@@ -69,8 +69,8 @@ task :post do
     post.puts "category: #{category}"
     post.puts "tags: #{tags}"
     post.puts "---"
-    post.puts "{% include JB/setup %}"
   end
+  system("vim #{filename}")
 end # task :post
 
 # Usage: rake page name="about.html"

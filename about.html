@@ -1,5 +1,87 @@
 ---
-layout: default
 title: About
 permalink: /about/
 ---
+
+<!DOCTYPE html>
+<html>
+    {% include head.html %}
+    <style type="text/css" media="screen">
+        .wrap1 {
+            margin: 100px;
+            overflow: hidden;
+            position: relative;
+            height: 60%;
+            text-align: center;
+        }
+        .box {
+            text-align: center;
+            position: relative;
+            display: inline-block;
+        }
+        @-webkit-keyframes firstlayer /* Safari 和 Chrome */ {
+            from {top: 200px;}
+            to {top: 0;}
+        }
+        img {
+            width: 200px;
+            margin:0px auto;
+            position: relative;
+            top:200px;
+        }
+        <!-- #img-1 { -->
+        <!--     -webkit-animation: firstlayer 2s forwards;/* Safari 和 Chrome */ -->
+        <!-- } -->
+        <!-- #img-2 { -->
+        <!--     -webkit-animation: firstlayer 2s 0.3s forwards;/* Safari 和 Chrome */ -->
+        <!-- } -->
+        <!-- #img-3 { -->
+        <!--     -webkit-animation: firstlayer 2s 0.6s forwards;/* Safari 和 Chrome */ -->
+        <!-- } -->
+        <!-- #img-4 { -->
+        <!--     -webkit-animation: firstlayer 2s 0.9s forwards;/* Safari 和 Chrome */ -->
+        <!-- } -->
+        <!-- #img-5 { -->
+        <!--     -webkit-animation: firstlayer 2s 1.2s forwards;/* Safari 和 Chrome */ -->
+        <!-- } -->
+    </style>
+    <body>
+        {% include header.html %}
+        <div class="page-content">
+            <div class='wrap1'>
+                <div class="box">
+                    <img id="img-1" src="../img/about/displayer.png" alt=""/>
+                    <img id="img-2" src="../img/about/keyboard.png" alt=""/>
+                    <img id="img-3" src="../img/about/macbook.png" alt=""/>
+                    <img id="img-4" src="../img/about/ipod.png" alt=""/>
+                    <img id="img-5" src="../img/about/earphone.png" alt=""/>
+                </div>
+            </div>
+            <hr />
+            <div class="wrap1">
+                    <p>haha</p>
+            </div>
+            <div class="wrap1">
+                <div class="box">
+                    <img id="img-1" src="../img/about/python.png" alt=""/>
+                    <img id="img-2" src="../img/about/C.png" alt=""/>
+                    <img id="img-3" src="../img/about/shell.png" alt=""/>
+                    <img id="img-4" src="../img/about/html5.png" alt=""/>
+                </div>
+            </div>
+            <!-- <div class="wrap1"> -->
+            <!--     <div class="img-editor"> -->
+            <!--             <img src="../img/about/vim.png" alt=""/> -->
+            <!--     </div> -->
+            <!--     <div class="img-editor"> -->
+            <!--             <img src="../img/about/sublime.png" alt=""/> -->
+            <!--     </div> -->
+            <!-- </div> -->
+            <!-- <div class="wrap"> -->
+            <!--     <p>技能点有点点歪,会后端,正在努力学习前端</p> -->
+            <!--     <p>Python > C > Javascirpt</p> -->
+            <!-- </div> -->
+        </div>
+        {% include footer.html %}
+    </body>
+</html>

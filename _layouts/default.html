@@ -1,56 +1,53 @@
 <!DOCTYPE html>
 <html>
-{% include head.html %}
-<body>
-{% include header.html %}
-<div class="page-content">
-    <div class="wrap">
-        {{ content }}
-    </div>
-</div>
-{% include footer.html %}
+    {% include head.html %}
+    <body>
+        {% include header.html %}
+        <div class="page-content">
+            <div class="wrap">
+                {{ content }}
+            </div>
+        </div>
+        {% include footer.html %}
 
-<!-- mathjax -->
-<script type="text/x-mathjax-config">
+        <!-- mathjax -->
+        <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
   tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
 });
-</script>
-<script type="text/javascript"
-src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-<!-- highlight -->
-<script src="{{"/js/highlight.pack.js"|prepend:site.baseurl}}"></script>
-<script>hljs.initHighlightingOnLoad();</script>
-<!-- pleace change it! -->
-<script type="text/javascript">
+        </script>
+        <script type="text/javascript"
+                src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        </script>
+        <!-- highlight -->
+        <script src="{{"/js/highlight.pack.js"|prepend:site.baseurl}}"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <!-- pleace change it! -->
+        <script type="text/javascript">
 var duoshuoQuery = {short_name:"taizilongxu"};
 (function() {
- var ds = document.createElement('script');
- ds.type = 'text/javascript';ds.async = true;
- ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
- ds.charset = 'UTF-8';
- (document.getElementsByTagName('head')[0]
-  || document.getElementsByTagName('body')[0]).appendChild(ds);
- })();
-</script>
-<!-- top-scrooll -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.0.4/jquery.imagesloaded.js"></script>
-<script type="text/javascript">
-
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+        </script>
+        <!-- top-scrooll -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.0.4/jquery.imagesloaded.js"></script>
+        <script type="text/javascript">
 $(window).scroll(function() {
-
-        if($(this).scrollTop() > 100) {
+    if($(this).scrollTop() > 100) {
         $('.scroll-top').fadeIn(200);
-        } else {
+    } else {
         $('.scroll-top').fadeOut(200);
-        }
-        });
-
+    }
+});
 $('.scroll-top').bind('click', function(e) {
-        e.preventDefault();
-        $('body,html').animate({scrollTop:0},200);
-        });
-</script>
-</body>
+    e.preventDefault();
+    $('body,html').animate({scrollTop:0},200);
+});
+        </script>
+    </body>
 </html>

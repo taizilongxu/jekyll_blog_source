@@ -9,8 +9,8 @@
 html, body { height: 100%; }
 
 body {
-    font-family: 'Source Sans Pro', sans-serif;
-    line-height: 1.1;
+    font-family: Helvetica, sans-serif;
+    line-height: 1.6;
     font-weight: 300;
     background-color: #fdfdfd;
 
@@ -250,8 +250,8 @@ a:visited { color: #7C7C7C; }
 .post-header .meta a{}
 
 .post-content {
-    font-size: 1.1em;
-    font-weight: 600;
+    font-size: 14px;
+    line-height:1.6;
     margin: 0 0 60px;
 }
 
@@ -274,7 +274,7 @@ a:visited { color: #7C7C7C; }
     margin: 1em 0 15px;
     padding: 0;
     font-weight: bold;
-    line-height: 1.7;
+    line-height: 0.9;
     cursor: text;
     position: relative;
 }
@@ -330,31 +330,64 @@ a:visited { color: #7C7C7C; }
 .listing li{
     list-style-type: none;
 }
+/* CODE
+=============================================================================*/
 
-.post pre,
-.post  code {
-    font-family:Menlo,Consolas,"Courier New",monospace;
-    background-color: #F0F0F0;
+pre, code, tt {
+    color:#d14;
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
 }
 
-
-.post .highlight code{
-    font-size:14px !important;
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
 }
 
-.post pre {
-    border:1px solid #eee;
-    border-left:10px solid #DCDCE0;
-    border-radius:0;
-    border-top-right-radius:5px;
-    border-bottom-right-radius:5px;
-    padding:10px 15px;
-    overflow:auto;
-}
-.post pre code {
-    background-color:transparent !important
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
 }
 
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
 
 /*.post-content p,pre,pre.prettyprint,blockquote{margin:0 0 15px}*/
 
