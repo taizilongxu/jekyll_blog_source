@@ -7,48 +7,113 @@ permalink: /about/
 <html>
     {% include head.html %}
     <style type="text/css" media="screen">
-        .wrap1 {
-            margin: 100px;
-            overflow: hidden;
-            position: relative;
-            height: 60%;
-            text-align: center;
-        }
+.wrap1 {
+    margin: 100px;
+    overflow: hidden;
+    position: relative;
+    height: 60%;
+    text-align: center;
+}
         .box {
             text-align: center;
             position: relative;
             display: inline-block;
         }
-        @-webkit-keyframes firstlayer /* Safari 和 Chrome */ {
-            from {top: 200px;}
-            to {top: 0;}
-        }
         img {
             width: 200px;
             margin:0px auto;
             position: relative;
-            top:200px;
         }
-        <!-- #img-1 { -->
-        <!--     -webkit-animation: firstlayer 2s forwards;/* Safari 和 Chrome */ -->
-        <!-- } -->
-        <!-- #img-2 { -->
-        <!--     -webkit-animation: firstlayer 2s 0.3s forwards;/* Safari 和 Chrome */ -->
-        <!-- } -->
-        <!-- #img-3 { -->
-        <!--     -webkit-animation: firstlayer 2s 0.6s forwards;/* Safari 和 Chrome */ -->
-        <!-- } -->
-        <!-- #img-4 { -->
-        <!--     -webkit-animation: firstlayer 2s 0.9s forwards;/* Safari 和 Chrome */ -->
-        <!-- } -->
-        <!-- #img-5 { -->
-        <!--     -webkit-animation: firstlayer 2s 1.2s forwards;/* Safari 和 Chrome */ -->
-        <!-- } -->
+        .wrap1 p{
+            font-size: 30px;
+            color: #6f6f6f;
+        }
+        .wrap1 a {
+            color: #D34848;
+        }
+        .wrap1 li{
+            display: list-item;
+            font-size: 15px;
+        }
+        .wrap1 ul {
+            margin-left: 1.35em;
+        }
+        .img-hidden {
+            opacity: 0;
+        }
+        hr {
+            border:0;
+            background-color:#F4F4F4;
+            height:1px;
+        }
+        #wrap-last{
+            margin-bottom:100px;
+        }
+        .left,
+        .right {
+            text-align: left;
+            margin: 0px 0px;
+            padding: 5% 5% 5% 20%;
+            float: left;
+        }
     </style>
+    <script type="text/javascript" charset="utf-8">
+$(document).ready(
+        function(){
+            var width = $(".box").width()/2 - 100;
+            $('#img-1').css({top:"100px", opacity:"0",left:width})
+                .animate({top:"-=100px"}, 1000)
+                .animate({left:"0", opacity:"1"}) ;
+            var width = ($(".box").width() - 200)/4;
+            $('#img-2').css({top:"100px", opacity:"0",left:width})
+                .animate({top:"-=100px"}, 1000)
+                .animate({left:"0", opacity:"1"}) ;
+            $('#img-3').css({top:"100px", opacity:"0"})
+                .animate({top:"-=100px",opacity:"1"}, 1000)
+                .animate({left:"0"}) ;
+            var width = ($(".box").width() - 200)/4;
+            $('#img-4').css({top:"100px", opacity:"0",right:width})
+                .animate({top:"-=100px"}, 1000)
+                .animate({right:"0", opacity:"1"}) ;
+            var width = $(".box").width()/2 - 100;
+            $('#img-5').css({top:"100px", opacity:"0",right:width})
+                .animate({top:"-=100px"}, 1000)
+                .animate({right:"0", opacity:"1"}) ;
+        }
+);
+
+var skill = 1;
+$(window).scroll(function() {
+    if($(document).scrollTop() > $("header").height() + $("#wrap-1").height()*2 && skill == 1){
+        skill = 0;
+        $('#img-6').css({top:"100px", opacity:"0"})
+            .animate({top:"-=100px",opacity:"1"}, 400);
+        $('#img-7').css({top:"100px", opacity:"0"})
+            .animate({top:"-=100px",opacity:"1"}, 600);
+        $('#img-8').css({top:"100px", opacity:"0"})
+            .animate({top:"-=100px",opacity:"1"}, 800);
+        $('#img-9').css({top:"100px", opacity:"0"})
+            .animate({top:"-=100px",opacity:"1"}, 1000);
+    }
+});
+var skill2 = 1;
+$(window).scroll(function() {
+    if($(document).scrollTop() > $("header").height() + $("#wrap-1").height()*3 && skill2 == 1){
+        skill2 = 0;
+        $('#img-10').css({top:"100px", opacity:"0"})
+            .animate({top:"-=100px",opacity:"1"}, 2000);
+        $('#img-11').css({top:"100px", opacity:"0"})
+            .animate({top:"-=100px",opacity:"1"}, 2000);
+    }
+});
+    </script>
     <body>
         {% include header.html %}
         <div class="page-content">
-            <div class='wrap1'>
+            <div class="wrap1">
+                <p>Stay hungry, stay foolish</p>
+            </div>
+            <div class='wrap1' id="wrap-1">
                 <div class="box">
                     <img id="img-1" src="../img/about/displayer.png" alt=""/>
                     <img id="img-2" src="../img/about/keyboard.png" alt=""/>
@@ -58,30 +123,80 @@ permalink: /about/
                 </div>
             </div>
             <hr />
-            <div class="wrap1">
-                    <p>haha</p>
+            <div class="wrap1" id="skills">
+                <p>My skills</p>
             </div>
             <div class="wrap1">
                 <div class="box">
-                    <img id="img-1" src="../img/about/python.png" alt=""/>
-                    <img id="img-2" src="../img/about/C.png" alt=""/>
-                    <img id="img-3" src="../img/about/shell.png" alt=""/>
-                    <img id="img-4" src="../img/about/html5.png" alt=""/>
+                    <img class="img-hidden" id="img-6" src="../img/about/python.png" alt=""/>
+                    <img class="img-hidden" id="img-7" src="../img/about/C.png" alt=""/>
+                    <img class="img-hidden" id="img-8" src="../img/about/shell.png" alt=""/>
+                    <img class="img-hidden" id="img-9" src="../img/about/html5.png" alt=""/>
                 </div>
             </div>
-            <!-- <div class="wrap1"> -->
-            <!--     <div class="img-editor"> -->
-            <!--             <img src="../img/about/vim.png" alt=""/> -->
-            <!--     </div> -->
-            <!--     <div class="img-editor"> -->
-            <!--             <img src="../img/about/sublime.png" alt=""/> -->
+            <hr />
+            <div class="wrap1" id="skills">
+                <p>Editors</p>
+            </div>
+            <div class="wrap1">
+                <div class="box">
+                    <img class="img-hidden" id="img-10" src="../img/about/vim.png" alt=""/>
+                    <img class="img-hidden" id="img-11" src="../img/about/sublime.png" alt=""/>
+                </div>
+            </div>
+            <hr />
+            <!-- <div class="wrap1" id="skills"> -->
+            <!--     <p>Editors</p> -->
+            <!-- </div> -->
+            <!-- <div class="wrap1" id="wrap-last"> -->
+            <!--     <div class="box"> -->
+            <!--         <img class="img-hidden" id="img-12" src="../img/about/douban.png" alt=""/> -->
             <!--     </div> -->
             <!-- </div> -->
-            <!-- <div class="wrap"> -->
-            <!--     <p>技能点有点点歪,会后端,正在努力学习前端</p> -->
-            <!--     <p>Python > C > Javascirpt</p> -->
-            <!-- </div> -->
+            <!-- <hr /> -->
+            <div class="wrap1 left">
+                <ul>
+                    <li>友链:
+                        <ul>
+                            <li><a href="http://qisblog.com" target="_blank">张大可</a></li>
+                        </ul>
+                    </li>
+                    <li>订阅的Blog:
+                        <ul>
+                            <li><a href="http://blog.binux.me/" target="_blank">Binuxの杂货铺</a></li>
+                            <li><a href="http://blog.psjay.com/" target="_blank">PSJay Blog</a></li>
+                            <li><a href="https://blog.robotshell.org/" target="_blank">Robot Shell</a></li>
+                            <li><a href="http://andrewliu.tk/" target="_blank">Andrew Liu</a></li>
+                            <li><a href="http://www.the5fire.com/" target="_blank">The5fire(Python从业者)</a></li>
+                            <li><a href="http://lilydjwg.is-programmer.com/" target="_blank">依云</a></li>
+                            <li><a href="http://dongweiming.github.io/blog/" target="_blank">小明明s à domicile</a></li>
+                            <li><a href="http://www.zhengyanlong.org.cn/" target="_blank">单行道</a></li>
+                            <li><a href="http://yafeilee.me/" target="_blank">WinDy's Blog</a></li>
+                            <li><a href="http://shuxiaowang.com/" target="_blank">流水沉微</a></li>
+                            <li><a href="http://coolshell.cn/" target="_blank">酷壳</a></li>
+                            <li><a href="http://www.ruanyifeng.com/blog/" target="_blank">阮一峰</a></li>
+                            <li><a href="http://blog.leiqin.name/" target="_blank">雷钦的博客</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="wrap1 right">
+                <ul>
+                    <li>前端:
+                        <ul>
+                            <li><a href="http://litten.github.io/" target="_blank">Litten</a></li>
+                            <li><a href="http://makaiqian.com/" target="_blank">麻凯倩's blog❤前端'</a></li>
+                            <li><a href="http://www.cnblogs.com/jikey/p/4454857.html" target="_blank">豪情</a></li>
+                            <li><a href="http://wwsun.me/" target="_blank">wwsun</a></li>
+                            <li><a href="http://daiison.com/tech/" target="_blank">一隅</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
         {% include footer.html %}
+        <script type="text/javascript" charset="utf-8">
+
+        </script>
     </body>
 </html>
